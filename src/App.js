@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Saludo from "./Saludo";
 
-function App() {
+export default function App(props) {
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Saludo nombre={props} />
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -21,5 +23,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
