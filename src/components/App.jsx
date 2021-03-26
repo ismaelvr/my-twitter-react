@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { Navbar, NavbarBrand, Nav, NavItem, Media, Row, Col, Container, Alert } from 'reactstrap';
-
-import PostList from './posts/PostList';
-
 import { GoogleLogin } from 'react-google-login';
-import config from '../config.js';
 
+import config from '../config.js';
+import PostList from './posts/PostList';
 import MyPlaceBird from '../images/bird.png';
+
 var imgStyle = {
   maxWidth: "85px",
 };
 
 export default function App(props){
 
-  const [loginMessage, setLoginMessage] = useState(null);
+  const [loginMessage, setLoginMessage] = useState(null); //Así creamos un estado
 
   const responseGoogleSuccess = (googleUser) => {
     var profile = googleUser.getBasicProfile();
